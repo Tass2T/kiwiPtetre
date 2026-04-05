@@ -1,13 +1,20 @@
 [gd_scene format=3 uid="uid://bf18205q5nte6"]
 
 [ext_resource type="PackedScene" uid="uid://b3x44w8rh4do3" path="res://Scenes/player.tscn" id="1_ebmjs"]
-[ext_resource type="PackedScene" uid="uid://dyql0iv0fwhi8" path="res://Scenes/PlateForme.tscn" id="2_qxrlw"]
+[ext_resource type="PackedScene" uid="uid://dyql0iv0fwhi8" path="res://Scenes/Playground/PlateForm.tscn" id="2_qxrlw"]
+[ext_resource type="PackedScene" uid="uid://b4x3vmqj1udq1" path="res://Scenes/Playground/Wall.tscn" id="3_wrm1d"]
 
 [node name="Game" type="Node2D" unique_id=1872770997]
 
 [node name="Player" parent="." unique_id=1752384532 instance=ExtResource("1_ebmjs")]
 
-[node name="PlateForme" parent="." unique_id=1027426513 instance=ExtResource("2_qxrlw")]
-position = Vector2(1409, -33)
-
 [node name="PlateForme2" parent="." unique_id=212234643 instance=ExtResource("2_qxrlw")]
+
+[node name="Wall" parent="." unique_id=1651461794 instance=ExtResource("3_wrm1d")]
+position = Vector2(-303, -308)
+
+[node name="Wall2" parent="." unique_id=2006076564 instance=ExtResource("3_wrm1d")]
+position = Vector2(-75, -503)
+
+[node name="PlateForme" parent="." unique_id=1027426513 instance=ExtResource("2_qxrlw")]
+position = Vector2(-991, -449)
