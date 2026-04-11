@@ -1,6 +1,6 @@
 extends State
 
-@onready var Fall_State: Node = $"../Fall"
+@onready var fall_state: Node = $"../Fall"
 
 func Enter() -> void:
 	player.velocity.y -= player.JUMP_SPEED
@@ -8,7 +8,7 @@ func Enter() -> void:
 func Physics_Process(delta: float) -> State:
 	
 	if player.velocity.y > 0:
-		return Fall_State
+		return fall_state
 	
 	player.velocity.y += player.GRAVITY * delta
 	
