@@ -13,7 +13,7 @@ var direction: float = 0
 func _ready() -> void:
 	states.Initialize(self)
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	
 	direction = Input.get_axis("left", "right")
 	
