@@ -2,8 +2,12 @@ extends State
 
 @onready var idle_state: Idle_State = $"../Idle"
 @onready var jump_state: Node = $"../Jump"
+@onready var fall_state: Node = $"../Fall"
 
 func Physics_Process(delta: float) -> State:
+	
+	if not player.is_on_floor():
+		return fall_state
 	
 	if player.direction != 0:
 		player.velocity.x = move_toward(player.velocity.x, player.MAX_SPEED * player.direction, player.ACCELERATION * delta)

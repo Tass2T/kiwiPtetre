@@ -48,8 +48,6 @@ script = ExtResource("5_fkybt")
 [node name="Bounce" type="Node" parent="States" unique_id=1227679643]
 script = ExtResource("7_3smsa")
 
-[node name="Crouch" type="Node" parent="States" unique_id=934216621]
-
 [node name="Ray_Right" type="RayCast2D" parent="." unique_id=482022923]
 position = Vector2(27, 0)
 target_position = Vector2(15, 0)
