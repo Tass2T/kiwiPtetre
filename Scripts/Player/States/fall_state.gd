@@ -1,7 +1,11 @@
-extends State
+class_name Fall_State extends State
 
 @onready var idle_state: Idle_State = $"../Idle"
 @onready var bounce_state: State = $"../Bounce"
+@onready var climb_state: Climb_State = $"../Climb"
+
+func Enter() -> void:
+	pass
 
 func Physics_Process(delta: float) -> State:
 	
@@ -13,7 +17,11 @@ func Physics_Process(delta: float) -> State:
 	else: 
 		player.velocity.x = move_toward(player.velocity.x, 0, player.FRICTION * delta)
 	
+	if player.wall_direction != 0 and player.direction == player.wall_direction:
+		return climb_state
+	
 	player.velocity.y += player.GRAVITY * delta
+
 	
 	return null
 	

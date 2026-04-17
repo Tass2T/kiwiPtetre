@@ -1,6 +1,7 @@
 class_name Bounce_State extends State
 
 @onready var fall_state: Node = $"../Fall"
+@onready var idle_state: Idle_State = $"../Idle"
 
 func Enter() -> void:
 	Initialize_Bounce()
@@ -10,6 +11,9 @@ func Physics_Process(delta: float) -> State:
 	
 	if player.velocity.y > 0:
 		return fall_state
+		
+	if player.is_on_floor():
+		return idle_state
 	
 	return null
 	

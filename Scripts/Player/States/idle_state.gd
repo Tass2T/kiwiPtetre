@@ -4,6 +4,9 @@ class_name Idle_State extends State
 @onready var fall_state: Node = $"../Fall"
 @onready var jump_state : Node = $"../Jump"
 
+func Enter() -> void:
+	pass
+
 func Physics_Process(delta: float) -> State:
 	
 	player.velocity.x = move_toward(player.velocity.x, 0, player.FRICTION * delta)
