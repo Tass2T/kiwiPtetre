@@ -1,11 +1,14 @@
-class_name Game extends Node
+extends Node
 
-var current_level = 1
+var current_level: int = 1
 
 func _ready() -> void:
-	go_to_level(1)
+	load_level()
 
-func go_to_level(level_index: int) -> void:
-	current_level = level_index
-	var path = "res://scenes/levels/level_%02d.tscn" % level_index
+func load_level() -> void:
+	var path: String = "res://Scenes/levels/level_%d.tscn" % current_level
 	get_tree().change_scene_to_file(path)
+
+func go_next_level() -> void:
+	current_level += 1
+	load_level()

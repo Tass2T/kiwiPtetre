@@ -6,10 +6,10 @@ class_name Player extends CharacterBody2D
 
 const GRAVITY : float = 1240.0
 const CLIMB_GRAVITY: float = 100.0
-const JUMP_SPEED: float = 640.0
-const ACCELERATION: float = 2000.0
-const MAX_SPEED: float = 400.0      
-const FRICTION: float = 4000.0
+const JUMP_SPEED: float = 1200.0
+const ACCELERATION: float = 5000.0
+const MAX_SPEED: float = 800.0      
+const FRICTION: float = 8000.0
 const BOUNCE_FORCE_Y: float  = 600.0
 const BOUNCE_FORCE_X: float = 400.0
 
