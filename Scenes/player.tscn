@@ -28,7 +28,7 @@ color = Color(0.7019608, 0.08627451, 0.61960787, 1)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1334529353]
 position = Vector2(0, -94)
-zoom = Vector2(0.6, 0.6)
+zoom = Vector2(0.5, 0.5)
 
 [node name="States" type="Node" parent="." unique_id=582584395]
 script = ExtResource("2_ur7pv")
@@ -52,9 +52,11 @@ script = ExtResource("7_f1ej7")
 script = ExtResource("8_oprun")
 
 [node name="Ray_Right" type="RayCast2D" parent="." unique_id=482022923]
-position = Vector2(27, 0)
-target_position = Vector2(15, 0)
+position = Vector2(64, 0)
+target_position = Vector2(30, 0)
+collision_mask = 4
 
 [node name="Ray_Left" type="RayCast2D" parent="." unique_id=624595584]
-position = Vector2(-27, 0)
-target_position = Vector2(-15, 0)
+position = Vector2(-64, 0)
+target_position = Vector2(-30, 0)
+collision_mask = 4
