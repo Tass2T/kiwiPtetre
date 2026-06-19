@@ -4,12 +4,12 @@ class_name Player extends CharacterBody2D
 @onready var ray_left: RayCast2D = $Ray_Left
 @onready var states: State_Manager = $States
 
-const GRAVITY : float = 6000.0
+const GRAVITY : float = 3000.0
 const CLIMB_GRAVITY: float = 1200.0
-const JUMP_SPEED: float = 3000.0
+const JUMP_SPEED: float = 1500.0
 const ACCELERATION: float = 7800.0
 const MAX_SPEED: float = 1400.0      
-const FRICTION: float = 8000.0
+const FRICTION: float = 9000.0
 const BOUNCE_FORCE_Y: float  = 1400.0
 const BOUNCE_FORCE_X: float = 800.0
 
