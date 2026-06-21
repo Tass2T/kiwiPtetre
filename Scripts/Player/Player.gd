@@ -40,6 +40,5 @@ func check_wall_collision() -> float:
 	
 func decrease_life() -> void:
 	life -= 1
-	print(life)
 	if life == 0:
 		Game.handle_game_over()

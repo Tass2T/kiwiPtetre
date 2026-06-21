@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b3x44w8rh4do3"]
 
-[ext_resource type="Script" uid="uid://bnqiatb24j6aj" path="res://scripts/player/Player.gd" id="1_smehm"]
+[ext_resource type="Script" uid="uid://bnqiatb24j6aj" path="res://scripts/player/player.gd" id="1_smehm"]
 [ext_resource type="Script" uid="uid://c2ua2o68cn1uq" path="res://scripts/player/States/state_manager.gd" id="2_ur7pv"]
 [ext_resource type="Script" uid="uid://dmkluc0mejuef" path="res://scripts/player/States/idle_state.gd" id="3_y4r1p"]
 [ext_resource type="Script" uid="uid://bnp2d6b0wg7tt" path="res://scripts/player/States/run_state.gd" id="4_d2wvv"]

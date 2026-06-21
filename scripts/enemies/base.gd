@@ -3,6 +3,9 @@ class_name BaseEnemy extends CharacterBody2D
 const GRAVITY: float = 3000
 enum STATES {CALM, AGGRO}
 
+const ACCELERATION: float = 7800.0
+const MAX_SPEED: float = 1400.0    
+
 
 var current_state = STATES.CALM
 var current_direction: float = -1.0
