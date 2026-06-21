@@ -7,8 +7,11 @@ func _ready() -> void:
 
 func load_level() -> void:
 	var path: String = "res://scenes/levels/level_%d.tscn" % current_level
-	get_tree().change_scene_to_file(path)
+	get_tree().call_deferred("change_scene_to_file", path)
 
 func go_next_level() -> void:
 	current_level += 1
 	load_level()
+
+func handle_game_over() -> void:
+	print("game over")

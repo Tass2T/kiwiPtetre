@@ -16,6 +16,8 @@ const BOUNCE_FORCE_X: float = 800.0
 var direction: float = 0
 var wall_direction: float = 0.0
 
+var life: int = 3
+
 func _ready() -> void:
 	state_manager.Initialize(self)
 
@@ -35,3 +37,9 @@ func check_wall_collision() -> float:
 		return 1.0
 		
 	return 0
+	
+func decrease_life() -> void:
+	life -= 1
+	print(life)
+	if life == 0:
+		Game.handle_game_over()
