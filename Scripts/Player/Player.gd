@@ -2,7 +2,7 @@ class_name Player extends CharacterBody2D
 
 @onready var ray_right: RayCast2D = $Ray_Right
 @onready var ray_left: RayCast2D = $Ray_Left
-@onready var states: State_Manager = $States
+@onready var state_manager: State_Manager = $States
 
 const GRAVITY : float = 3000.0
 const CLIMB_GRAVITY: float = 1200.0
@@ -17,7 +17,7 @@ var direction: float = 0
 var wall_direction: float = 0.0
 
 func _ready() -> void:
-	states.Initialize(self)
+	state_manager.Initialize(self)
 
 func _physics_process(_delta: float) -> void:
 	

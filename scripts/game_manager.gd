@@ -6,7 +6,7 @@ func _ready() -> void:
 	load_level()
 
 func load_level() -> void:
-	var path: String = "res://Scenes/levels/level_%d.tscn" % current_level
+	var path: String = "res://scenes/levels/level_%d.tscn" % current_level
 	get_tree().change_scene_to_file(path)
 
 func go_next_level() -> void:
