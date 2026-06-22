@@ -29,8 +29,13 @@ position = Vector2(66.5, 95)
 shape = SubResource("RectangleShape2D_otjec")
 
 [node name="WallDetector" type="RayCast2D" parent="." unique_id=1494768454]
-position = Vector2(70, 173)
+position = Vector2(67, 172)
 target_position = Vector2(80, 0)
+collision_mask = 4
+
+[node name="EdgeDetector" type="RayCast2D" parent="." unique_id=411337732]
+position = Vector2(67, 98)
+target_position = Vector2(75, 98)
 collision_mask = 4
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
