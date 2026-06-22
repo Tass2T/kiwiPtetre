@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://yvpkpltsa168"]
 
-[ext_resource type="Script" uid="uid://bg6d6teq7gvqg" path="res://scripts/enemies/base.gd" id="1_n2gb2"]
+[ext_resource type="Script" uid="uid://bg6d6teq7gvqg" path="res://Scripts/enemies/base.gd" id="1_n2gb2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ddicg"]
 size = Vector2(125, 185.25)
@@ -27,5 +27,10 @@ shape = SubResource("RectangleShape2D_ddicg")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=302070690]
 position = Vector2(66.5, 95)
 shape = SubResource("RectangleShape2D_otjec")
+
+[node name="WallDetector" type="RayCast2D" parent="." unique_id=1494768454]
+position = Vector2(70, 173)
+target_position = Vector2(80, 0)
+collision_mask = 4
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

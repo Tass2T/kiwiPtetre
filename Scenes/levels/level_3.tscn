@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://b2d7c0yidstox"]
 
-[ext_resource type="PackedScene" uid="uid://capq14c0ffiwc" path="res://Scenes/LevelPortal.tscn" id="1_jw3cj"]
-[ext_resource type="PackedScene" uid="uid://b3x44w8rh4do3" path="res://Scenes/player.tscn" id="1_n12qs"]
+[ext_resource type="PackedScene" uid="uid://capq14c0ffiwc" path="res://scenes/LevelPortal.tscn" id="1_jw3cj"]
+[ext_resource type="PackedScene" uid="uid://b3x44w8rh4do3" path="res://scenes/player.tscn" id="1_n12qs"]
 [ext_resource type="Texture2D" uid="uid://ct4ndgusl7tub" path="res://Assets/Levels/placeHolderSpritesheet.png" id="2_jw3cj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q2mrg"]

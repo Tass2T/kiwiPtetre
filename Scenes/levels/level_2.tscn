@@ -1,11 +1,11 @@
 [gd_scene format=4 uid="uid://bdokihygjwuw6"]
 
-[ext_resource type="PackedScene" uid="uid://capq14c0ffiwc" path="res://Scenes/LevelPortal.tscn" id="1_q2mrg"]
-[ext_resource type="PackedScene" uid="uid://b3x44w8rh4do3" path="res://Scenes/player.tscn" id="1_tjgfl"]
-[ext_resource type="Texture2D" uid="uid://ct4ndgusl7tub" path="res://Assets/Levels/placeHolderSpritesheet.png" id="2_u4prk"]
+[ext_resource type="PackedScene" uid="uid://capq14c0ffiwc" path="res://scenes/LevelPortal.tscn" id="1_ra442"]
+[ext_resource type="PackedScene" uid="uid://b3x44w8rh4do3" path="res://scenes/player.tscn" id="2_fiq81"]
+[ext_resource type="Texture2D" uid="uid://ct4ndgusl7tub" path="res://Assets/Levels/placeHolderSpritesheet.png" id="3_l37oo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q2mrg"]
-texture = ExtResource("2_u4prk")
+texture = ExtResource("3_l37oo")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
@@ -18,11 +18,11 @@ sources/0 = SubResource("TileSetAtlasSource_q2mrg")
 
 [node name="LevelTwo" type="Node2D" unique_id=712256858]
 
-[node name="LevelPortal" parent="." unique_id=1751170076 instance=ExtResource("1_q2mrg")]
+[node name="LevelPortal" parent="." unique_id=1751170076 instance=ExtResource("1_ra442")]
 position = Vector2(3065, 1100)
 scale = Vector2(7.2157583, 7.464827)
 
-[node name="Player" parent="." unique_id=1752384532 instance=ExtResource("1_tjgfl")]
+[node name="Player" parent="." unique_id=1752384532 instance=ExtResource("2_fiq81")]
 position = Vector2(1702, 932)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=595159293]
