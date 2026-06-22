@@ -11,7 +11,7 @@ const ACCELERATION: float = 7800.0
 const MAX_SPEED: float = 1400.0      
 const FRICTION: float = 9000.0
 const BOUNCE_FORCE_Y: float  = 1400.0
-const BOUNCE_FORCE_X: float = 800.0
+const BOUNCE_FORCE_X: float = 900.0
 
 var direction: float = 0
 var wall_direction: float = 0.0
