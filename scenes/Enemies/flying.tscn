@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cfxslqev3n1v8"]
+
+[ext_resource type="Script" uid="uid://2a8koxse6lrp" path="res://scripts/enemies/flying.gd" id="1_33bsy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ddicg"]
+size = Vector2(132.5, 190)
+
+[node name="Flying" type="CharacterBody2D" unique_id=193390076]
+collision_layer = 2
+script = ExtResource("1_33bsy")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=843377222]
+offset_right = 133.0
+offset_bottom = 190.0
+color = Color(0.7855679, 0, 0.092598535, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=297355483]
+position = Vector2(66.75, 95)
+shape = SubResource("RectangleShape2D_ddicg")

@@ -30,6 +30,10 @@ window/size/window_height_override=1080
 
 project/assembly_name="kiwiPtetre"
 
+[global_group]
+
+player=""
+
 [input]
 
 right={
