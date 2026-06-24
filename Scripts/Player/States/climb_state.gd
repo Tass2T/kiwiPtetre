@@ -8,7 +8,7 @@ func Enter() -> void:
 	player.velocity.y = player.velocity.y / 2
 
 func Physics_Process(delta: float) -> State:
-	player.velocity.y += player.CLIMB_GRAVITY * delta
+	player.velocity.y += (player.GRAVITY / 4) * delta
 	
 	if player.is_on_floor(): 
 		return idle_state

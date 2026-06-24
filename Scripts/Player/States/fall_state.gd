@@ -4,18 +4,15 @@ class_name Fall_State extends State
 @onready var bounce_state: State = $"../Bounce"
 @onready var climb_state: Climb_State = $"../Climb"
 
-func Enter() -> void:
-	pass
-
 func Physics_Process(delta: float) -> State:
 	
 	if player.is_on_floor():
 		return idle_state
 		
 	if player.direction != 0:
-		player.velocity.x = move_toward(player.velocity.x, player.MAX_SPEED * player.direction, player.ACCELERATION * delta)
+		player.velocity.x = lerp(player.velocity.x, player.direction * player.MAX_SPEED, player.ACCELERATION)
 	else: 
-		player.velocity.x = move_toward(player.velocity.x, 0, player.FRICTION * delta)
+		player.velocity.x = lerp(player.velocity.x, 0.0, player.FRICTION)
 	
 	if player.wall_direction != 0 and player.direction == player.wall_direction:
 		return climb_state
