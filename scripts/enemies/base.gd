@@ -38,10 +38,6 @@ func _physics_process(delta: float) -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is Player:
-		var y_delta = position.y - body.position.y
-		if y_delta > 90:
-			print("destroy enemy")
-		else:
 			body.decrease_life()
 
 

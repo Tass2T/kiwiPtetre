@@ -9,10 +9,9 @@ class_name Run_State extends State
 const COYOTE_FRAMES: int = 7
 var coyote: bool = false
 var last_floor: bool = false
-
-func _ready() -> void:
+	
+func Enter() -> void:
 	coyote_timer.wait_time = COYOTE_FRAMES / 60.0
-
 
 func Physics_Process(_delta: float) -> State:
 	
@@ -30,11 +29,7 @@ func Physics_Process(_delta: float) -> State:
 	if player.direction != 0:
 		player.velocity.x = lerp(player.velocity.x, player.direction * player.MAX_SPEED, player.ACCELERATION)
 	else: 
-		player.velocity.x = lerp(player.velocity.x, 0.0, player.FRICTION)
-		
-	if player.velocity.x == 0:
 		return idle_state
-		
 	 
 	return null
 

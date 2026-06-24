@@ -7,7 +7,6 @@ func Enter() -> void:
 	player.velocity.y -= player.JUMP_SPEED
 
 func Physics_Process(delta: float) -> State:
-	
 	if player.velocity.y > 0:
 		return fall_state
 	

@@ -5,7 +5,6 @@ class_name Fall_State extends State
 @onready var climb_state: Climb_State = $"../Climb"
 
 func Physics_Process(delta: float) -> State:
-	
 	if player.is_on_floor():
 		return idle_state
 		
