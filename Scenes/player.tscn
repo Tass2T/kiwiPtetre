@@ -8,9 +8,10 @@
 [ext_resource type="Script" uid="uid://cpl60urv8vbv1" path="res://Scripts/Player/States/fall_state.gd" id="6_jej6c"]
 [ext_resource type="Script" uid="uid://p1c33qtjnvt5" path="res://Scripts/Player/States/climb_state.gd" id="7_f1ej7"]
 [ext_resource type="Script" uid="uid://bubij62mysy1g" path="res://Scripts/Player/States/bounce_state.gd" id="8_oprun"]
+[ext_resource type="Script" uid="uid://dnnvnrp5gcpn4" path="res://Scripts/Player/States/crouch_state.gd" id="9_ur7pv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f60y1"]
-size = Vector2(133, 126)
+size = Vector2(133, 190)
 
 [node name="Player" type="CharacterBody2D" unique_id=1752384532 groups=["player"]]
 collision_mask = 6
@@ -24,7 +25,7 @@ offset_bottom = 95.0
 color = Color(0.7019608, 0.08627451, 0.61960787, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=302302455]
-position = Vector2(0.5, 32)
+position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_f60y1")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1334529353]
@@ -55,6 +56,9 @@ script = ExtResource("7_f1ej7")
 
 [node name="Bounce" type="Node" parent="States" unique_id=1227679643]
 script = ExtResource("8_oprun")
+
+[node name="Crouch" type="Node" parent="States" unique_id=380754699]
+script = ExtResource("9_ur7pv")
 
 [node name="Ray_Right" type="RayCast2D" parent="." unique_id=482022923]
 position = Vector2(67, 0)

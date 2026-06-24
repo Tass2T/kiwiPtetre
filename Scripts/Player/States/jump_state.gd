@@ -1,4 +1,4 @@
-extends State
+class_name Jump_State extends State
 
 @onready var fall_state: Node = $"../Fall"
 @onready var bounce_state: Bounce_State = $"../Bounce"
