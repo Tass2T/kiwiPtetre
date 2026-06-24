@@ -149,6 +149,8 @@ script = ExtResource("9_ur7pv")
 [node name="Attack" type="Node" parent="States" unique_id=2043111228]
 script = ExtResource("10_y4r1p")
 
+[node name="Hurt" type="Node" parent="States" unique_id=1551522525]
+
 [node name="Ray_Right" type="RayCast2D" parent="." unique_id=482022923]
 position = Vector2(67, 0)
 target_position = Vector2(30, 0)
