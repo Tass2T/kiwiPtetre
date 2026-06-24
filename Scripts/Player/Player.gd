@@ -7,7 +7,7 @@ class_name Player extends CharacterBody2D
 const GRAVITY : float = 4000.0
 const JUMP_SPEED: float = 1800.0
 const ACCELERATION: float = 0.25
-const MAX_SPEED: float = 800.0      
+const MAX_SPEED: float = 1000.0      
 const FRICTION: float = 0.2
 const BOUNCE_FORCE_Y: float  = 1400.0
 const BOUNCE_FORCE_X: float = 900.0
@@ -22,11 +22,11 @@ func _ready() -> void:
 
 func _physics_process(_delta: float) -> void:
 	
+	move_and_slide()
+	
 	direction = Input.get_axis("left", "right")
 	
 	wall_direction = check_wall_collision()
-	
-	move_and_slide()
 
 
 func check_wall_collision() -> float:
