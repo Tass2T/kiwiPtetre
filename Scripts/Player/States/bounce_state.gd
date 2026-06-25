@@ -1,6 +1,6 @@
 class_name Bounce_State extends State
 
-@onready var fall_state: Node = $"../Fall"
+@onready var fall_state: Fall_State = $"../Fall"
 @onready var idle_state: Idle_State = $"../Idle"
 
 func Enter() -> void:

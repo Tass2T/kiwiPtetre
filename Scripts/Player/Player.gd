@@ -10,12 +10,10 @@ const ACCELERATION: float = 0.25
 const MAX_SPEED: float = 1000.0      
 const FRICTION: float = 0.2
 const BOUNCE_FORCE_Y: float  = 1400.0
-const BOUNCE_FORCE_X: float = 1000.0
+const BOUNCE_FORCE_X: float = 1100.0
 
 var direction: float = 0
 var wall_direction: float = 0.0
-
-var life: int = 3
 
 func _ready() -> void:
 	state_manager.Initialize(self)
@@ -36,8 +34,3 @@ func check_wall_collision() -> float:
 		return 1.0
 		
 	return 0
-	
-func decrease_life() -> void:
-	life -= 1
-	if life == 0:
-		Game.handle_game_over()

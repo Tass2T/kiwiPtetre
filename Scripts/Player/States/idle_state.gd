@@ -1,8 +1,8 @@
 class_name Idle_State extends State
 
-@onready var run_state: Node = $"../Run"
-@onready var fall_state: Node = $"../Fall"
-@onready var jump_state : Node = $"../Jump"
+@onready var run_state: Run_State = $"../Run"
+@onready var fall_state: Fall_State = $"../Fall"
+@onready var jump_state : Jump_State = $"../Jump"
 @onready var crouch_state: Crouch_State = $"../Crouch"
 
 func Physics_Process(_delta: float) -> State:

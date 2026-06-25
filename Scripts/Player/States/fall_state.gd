@@ -1,7 +1,7 @@
 class_name Fall_State extends State
 
 @onready var idle_state: Idle_State = $"../Idle"
-@onready var bounce_state: State = $"../Bounce"
+@onready var bounce_state: Bounce_State = $"../Bounce"
 @onready var climb_state: Climb_State = $"../Climb"
 @onready var jump_state: Jump_State = $"../Jump"
 
