@@ -4,7 +4,6 @@ class_name Bounce_State extends State
 @onready var idle_state: Idle_State = $"../Idle"
 
 func Enter() -> void:
-	print('bounce')
 	Initialize_Bounce()
 
 func Physics_Process(delta: float) -> State:
