@@ -3,6 +3,7 @@ class_name Player extends CharacterBody2D
 @onready var ray_right: RayCast2D = $Ray_Right
 @onready var ray_left: RayCast2D = $Ray_Left
 @onready var state_manager: State_Manager = $States
+@onready var bounce_state: BounceState = $States/Bounce
 
 const GRAVITY : float = 4000.0
 const JUMP_SPEED: float = 1800.0
@@ -43,3 +44,6 @@ func check_wall_collision() -> float:
 		return 1.0
 		
 	return 0
+	
+func bounce_up() -> void:
+	state_manager.set_state(bounce_state)

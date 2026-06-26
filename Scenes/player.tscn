@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://p1c33qtjnvt5" path="res://scripts/player/States/climb_state.gd" id="7_f1ej7"]
 [ext_resource type="Script" uid="uid://bubij62mysy1g" path="res://scripts/player/States/wall_bounce_state.gd" id="8_oprun"]
 [ext_resource type="Script" uid="uid://dnnvnrp5gcpn4" path="res://scripts/player/States/crouch_state.gd" id="9_ur7pv"]
+[ext_resource type="Script" uid="uid://cw882swai6pd0" path="res://scripts/player/States/bounce_state.gd" id="10_y4r1p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f60y1"]
 size = Vector2(133, 190)
@@ -59,6 +60,9 @@ script = ExtResource("8_oprun")
 
 [node name="Crouch" type="Node" parent="States" unique_id=380754699]
 script = ExtResource("9_ur7pv")
+
+[node name="Bounce" type="Node" parent="States" unique_id=159910762]
+script = ExtResource("10_y4r1p")
 
 [node name="Ray_Right" type="RayCast2D" parent="." unique_id=482022923]
 position = Vector2(67, 0)
