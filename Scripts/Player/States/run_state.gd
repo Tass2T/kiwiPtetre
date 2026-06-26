@@ -27,7 +27,7 @@ func Physics_Process(_delta: float) -> State:
 	last_floor = on_floor
 	
 	if player.direction != 0:
-		player.velocity.x = lerp(player.velocity.x, player.direction * player.MAX_SPEED, player.ACCELERATION)
+		player.velocity.x = lerp(player.velocity.x, player.direction * player.speed, player.ACCELERATION)
 	else: 
 		return idle_state
 	 

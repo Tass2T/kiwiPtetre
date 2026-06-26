@@ -11,7 +11,7 @@ func Physics_Process(delta: float) -> State:
 		return fall_state
 	
 	if player.direction != 0:
-		player.velocity.x = lerp(player.velocity.x, player.direction * player.MAX_SPEED, player.ACCELERATION)
+		player.velocity.x = lerp(player.velocity.x, player.direction * player.speed, player.ACCELERATION)
 	else: 
 		player.velocity.x = lerp(player.velocity.x, 0.0, player.FRICTION)
 		
