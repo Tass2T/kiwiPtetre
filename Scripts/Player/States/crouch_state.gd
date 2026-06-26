@@ -14,7 +14,7 @@ func Physics_Process(_delta: float) -> State:
 	player.velocity.x = lerp(player.velocity.x, 0.0, player.FRICTION / 2)
 	return null
 	
-func Input(input: InputEvent) -> State:
+func Input_Process(input: InputEvent) -> State:
 	if input.is_action_released("down"):
 		return idle
 	return null

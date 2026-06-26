@@ -26,7 +26,7 @@ func _physics_process(delta: float) -> void:
 	set_state(current_state.Physics_Process(delta))
 	
 func _unhandled_input(event: InputEvent) -> void:
-	set_state(current_state.Input(event))
+	set_state(current_state.Input_Process(event))
 
 func set_state(new_state: State):
 	if !new_state:

@@ -11,7 +11,7 @@ func Process(_delta: float) -> State:
 func Physics_Process(_delta: float) -> State:
 	return null
 	
-func Input(_input: InputEvent) -> State:
+func Input_Process(_input: InputEvent) -> State:
 	return null
 	
 func Exit() -> void:

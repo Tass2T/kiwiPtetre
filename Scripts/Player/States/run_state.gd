@@ -33,12 +33,13 @@ func Physics_Process(_delta: float) -> State:
 	 
 	return null
 
-func Input(input: InputEvent) -> State:
+func Input_Process(input: InputEvent) -> State:
 	if (input.is_action_pressed("jump") and (player.is_on_floor() or coyote)):
 		coyote = false
 		return jump_state
 	elif input.is_action_pressed("down"):
 		return crouch_state
+	
 	return null
 
 

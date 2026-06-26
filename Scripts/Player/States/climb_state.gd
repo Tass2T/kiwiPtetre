@@ -17,7 +17,7 @@ func Physics_Process(delta: float) -> State:
 	
 	return null
 	
-func Input(input: InputEvent) -> State:
+func Input_Process(input: InputEvent) -> State:
 	if input.is_action_pressed("jump"):
 		return bounce_state
 	return null
