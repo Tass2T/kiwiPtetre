@@ -1,7 +1,7 @@
 class_name Fall_State extends State
 
 @onready var idle_state: Idle_State = $"../Idle"
-@onready var bounce_state: Bounce_State = $"../Bounce"
+@onready var wall_bounce_state: Wall_Bounce_State = $"../WallBounce"
 @onready var climb_state: Climb_State = $"../Climb"
 @onready var jump_state: Jump_State = $"../Jump"
 
@@ -38,7 +38,7 @@ func Physics_Process(delta: float) -> State:
 func Input_Process(input: InputEvent) -> State:
 	if input.is_action_pressed("jump"):
 		if player.wall_direction != 0:
-			return bounce_state
+			return wall_bounce_state
 		
 		jump_buffer_timer = JUMP_BUFFER_TIME
 		

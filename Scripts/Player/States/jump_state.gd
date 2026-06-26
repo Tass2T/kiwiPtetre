@@ -1,7 +1,7 @@
 class_name Jump_State extends State
 
 @onready var fall_state: Node = $"../Fall"
-@onready var bounce_state: Bounce_State = $"../Bounce"
+@onready var wall_bounce_state: Wall_Bounce_State = $"../WallBounce"
 
 func Enter() -> void:
 	player.velocity.y -= player.JUMP_SPEED
@@ -21,7 +21,7 @@ func Physics_Process(delta: float) -> State:
 	
 func Input_Process(input: InputEvent) -> State:
 	if input.is_action_pressed("jump") and player.wall_direction != 0:
-		return bounce_state
+		return wall_bounce_state
 		
 	if input.is_action_released("jump") and player.velocity.y < 0:
 		player.velocity.y = player.velocity.y / 4

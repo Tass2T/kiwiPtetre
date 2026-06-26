@@ -1,7 +1,7 @@
 class_name Climb_State extends State
 
 @onready var idle_state: Idle_State = $"../Idle"
-@onready var bounce_state: Bounce_State = $"../Bounce"
+@onready var wall_bounce_state: Wall_Bounce_State = $"../WallBounce"
 @onready var fall_state: Fall_State = $"../Fall"
 
 func Enter() -> void:
@@ -19,5 +19,5 @@ func Physics_Process(delta: float) -> State:
 	
 func Input_Process(input: InputEvent) -> State:
 	if input.is_action_pressed("jump"):
-		return bounce_state
+		return wall_bounce_state
 	return null

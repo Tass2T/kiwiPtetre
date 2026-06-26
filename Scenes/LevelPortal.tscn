@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://capq14c0ffiwc"]
 
-[ext_resource type="Script" uid="uid://crmolqptt6gth" path="res://Scripts/level_portal.gd" id="1_clymu"]
+[ext_resource type="Script" uid="uid://crmolqptt6gth" path="res://scripts/level_portal.gd" id="1_clymu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6jwqk"]
 

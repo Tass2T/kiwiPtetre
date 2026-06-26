@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cfsqd7yvnvein"]
+
+[ext_resource type="Script" uid="uid://dc6u746tm4skf" path="res://scripts/props/jump_box.gd" id="1_pxaj3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ddicg"]
+size = Vector2(233.5, 232.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_otjec"]
+size = Vector2(197, 9)
+
+[node name="JumpBox" type="StaticBody2D" unique_id=1070814140]
+collision_layer = 2
+script = ExtResource("1_pxaj3")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=334782259]
+offset_right = 233.0
+offset_bottom = 233.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=540251346]
+position = Vector2(116.25, 116.75)
+shape = SubResource("RectangleShape2D_ddicg")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1758047117]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=928976230]
+position = Vector2(115.5, -4.5)
+shape = SubResource("RectangleShape2D_otjec")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

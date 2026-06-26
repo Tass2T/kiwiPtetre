@@ -1,4 +1,4 @@
-class_name Bounce_State extends State
+class_name Wall_Bounce_State extends State
 
 @onready var fall_state: Fall_State = $"../Fall"
 @onready var idle_state: Idle_State = $"../Idle"
