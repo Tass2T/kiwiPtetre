@@ -3,6 +3,10 @@
 [ext_resource type="Script" uid="uid://bhkj28cgmtka6" path="res://scripts/props/zip_line.gd" id="1_aal4g"]
 
 [sub_resource type="Curve2D" id="Curve2D_ov4fv"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -0.9168701, 1.7072754, 0, 0, 0, 0, 1236.5452, 644.0853)
+}
+point_count = 2
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aao1e"]
 size = Vector2(38, 36)
@@ -12,6 +16,8 @@ curve = SubResource("Curve2D_ov4fv")
 script = ExtResource("1_aal4g")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="." unique_id=1366901546]
+position = Vector2(389.44348, 234.79883)
+rotation = 0.4500859
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1411600016]
 
