@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bhwlc3eshk0j6"]
+
+[ext_resource type="Script" uid="uid://bki88xbttqq5f" path="res://scripts/props/moving_platform.gd" id="1_rvaur"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rvaur"]
+size = Vector2(188, 22)
+
+[node name="MovingPlatform" type="AnimatableBody2D" unique_id=876413848]
+script = ExtResource("1_rvaur")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2125759888]
+offset_right = 188.0
+offset_bottom = 22.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=704884947]
+position = Vector2(94, 11)
+shape = SubResource("RectangleShape2D_rvaur")
