@@ -2,16 +2,20 @@
 
 [ext_resource type="Script" uid="uid://bki88xbttqq5f" path="res://scripts/props/moving_platform.gd" id="1_rvaur"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rvaur"]
-size = Vector2(188, 22)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aao1e"]
+size = Vector2(569, 86)
 
-[node name="MovingPlatform" type="AnimatableBody2D" unique_id=876413848]
+[node name="MovingPlatform" type="Node2D" unique_id=1089658635]
 script = ExtResource("1_rvaur")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=2125759888]
-offset_right = 188.0
-offset_bottom = 22.0
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="." unique_id=757453249]
+collision_layer = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=704884947]
-position = Vector2(94, 11)
-shape = SubResource("RectangleShape2D_rvaur")
+[node name="ColorRect" type="ColorRect" parent="AnimatableBody2D" unique_id=1489759746]
+offset_right = 568.0
+offset_bottom = 86.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D" unique_id=765173221]
+position = Vector2(283.5, 43)
+shape = SubResource("RectangleShape2D_aao1e")
+one_way_collision = true
