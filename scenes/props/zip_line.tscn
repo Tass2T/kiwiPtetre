@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://j2j8dqumpjv1"]
+
+[ext_resource type="Script" uid="uid://bhkj28cgmtka6" path="res://scripts/props/zip_line.gd" id="1_aal4g"]
+
+[sub_resource type="Curve2D" id="Curve2D_ov4fv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aao1e"]
+size = Vector2(38, 36)
+
+[node name="ZipLine" type="Path2D" unique_id=2030173102]
+curve = SubResource("Curve2D_ov4fv")
+script = ExtResource("1_aal4g")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="." unique_id=1366901546]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1411600016]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=658997740]
+shape = SubResource("RectangleShape2D_aao1e")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
