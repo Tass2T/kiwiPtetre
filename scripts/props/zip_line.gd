@@ -1,37 +1,22 @@
 class_name Zip_Line extends Path2D
 
-@onready var path_follow_2d: PathFollow2D = $PathFollow2D
+@onready var line_2d: Line2D = $Line2D 
+@onready var collision_shape_2d: CollisionShape2D = $Area2D/CollisionShape2D
 
-@export var speed: float = 200.0
 
-var player: Player
-var is_active: bool = false
+func _ready() -> void:
+	
+	var points_count: int = curve.point_count
 
-func _physics_process(delta: float) -> void:
-	
-	if !is_active or player == null:
-		return
-		
-	if path_follow_2d.progress_ratio >= 1.0:
-		return
-	
-	path_follow_2d.progress += speed * delta
+	if points_count > 0:
+		for i in points_count:
+			line_2d.add_point(curve.get_point_position(i), i)
+			
+		collision_shape_2d.shape.a = curve.get_point_position(0)
+		collision_shape_2d.shape.b = curve.get_point_position(points_count - 1)
 
-func attach_player(p: Player) -> void:
-	player = p
-	player.trigger_state("zip")
-	path_follow_2d.progress = 0.0
-	is_active = true
-	
-	
-func detach_player()-> void:
-	is_active = false
-	player.trigger_state("fall")
-	player = null
-	
+
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is Player:
-		attach_player(body)
-		
-		
+		print("joueur entré")
