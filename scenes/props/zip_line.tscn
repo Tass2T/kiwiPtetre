@@ -3,6 +3,10 @@
 [ext_resource type="Script" uid="uid://bhkj28cgmtka6" path="res://scripts/props/zip_line.gd" id="1_aal4g"]
 
 [sub_resource type="Curve2D" id="Curve2D_fmd5y"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 12839, -6130, 0, 0, 0, 0, 13586, -5923)
+}
+point_count = 2
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_ddicg"]
 
@@ -13,12 +17,13 @@ script = ExtResource("1_aal4g")
 [node name="Line2D" type="Line2D" parent="." unique_id=1100274529]
 
 [node name="PathFollow2D" type="PathFollow2D" parent="." unique_id=2041816597]
-position = Vector2(14829, -5976)
-rotation = 0.26129714
+position = Vector2(12839, -6130)
+rotation = 0.27032536
+loop = false
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1691758515]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=965971061]
 shape = SubResource("SegmentShape2D_ddicg")
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

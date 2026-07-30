@@ -6,6 +6,7 @@ class_name Fall_State extends State
 @onready var jump_state: Jump_State = $"../Jump"
 
 const JUMP_BUFFER_TIME: float = 0.12
+const MAX_FALLING_SPEED: float = 1900.0
 var jump_buffer_timer: float = 0.0
 
 func Enter() -> void:
@@ -30,7 +31,7 @@ func Physics_Process(delta: float) -> State:
 	if player.wall_direction != 0 and player.direction == player.wall_direction:
 		return climb_state
 	
-	player.velocity.y += player.GRAVITY * delta
+	player.velocity.y = move_toward(player.velocity.y, MAX_FALLING_SPEED, player.GRAVITY * delta)
 
 	
 	return null

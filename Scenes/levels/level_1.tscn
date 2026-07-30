@@ -96,5 +96,5 @@ offset = Vector2(0, 960)
 position = Vector2(13567, -3636)
 offset = Vector2(-1600, 0)
 
-[node name="ZipLine" parent="." unique_id=915001607 instance=ExtResource("5_6761a")]
+[node name="ZipLine" parent="." unique_id=1104817254 instance=ExtResource("5_6761a")]
 curve = SubResource("Curve2D_6761a")

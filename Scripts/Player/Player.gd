@@ -19,6 +19,7 @@ var direction: float = 0
 var wall_direction: float = 0.0
 var speed = DEFAULT_SPEED
 var is_sprinting: bool = false
+var zipline_to_follow: PathFollow2D
 
 func _ready() -> void:
 	state_manager.Initialize(self)
@@ -57,3 +58,6 @@ func trigger_state(new_state: String) -> void:
 			state_manager.set_state(zip_state)
 	
 	return
+	
+func set_zipline_path(new_zipline_to_follow: PathFollow2D) -> void:
+	zipline_to_follow = new_zipline_to_follow
