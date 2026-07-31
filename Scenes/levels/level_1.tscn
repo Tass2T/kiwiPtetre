@@ -56,12 +56,6 @@ _data = {
 }
 point_count = 2
 
-[sub_resource type="Curve2D" id="Curve2D_6761a"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 13419, -6039, 0, 0, 0, 0, 14634, -5864)
-}
-point_count = 2
-
 [node name="Level_One" type="Node2D" unique_id=1112974152]
 
 [node name="Player" parent="." unique_id=1752384532 instance=ExtResource("1_2mbx3")]
@@ -104,6 +98,3 @@ offset = Vector2(-1600, 0)
 
 [node name="ZipLine" parent="." unique_id=915001607 instance=ExtResource("5_6761a")]
 curve = SubResource("Curve2D_aal4g")
-
-[node name="ZipLine2" parent="." unique_id=873280336 instance=ExtResource("5_6761a")]
-curve = SubResource("Curve2D_6761a")
