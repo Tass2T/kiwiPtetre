@@ -10,7 +10,9 @@ class_name Player extends CharacterBody2D
 const GRAVITY : float = 4000.0
 const JUMP_SPEED: float = 1800.0
 const ACCELERATION: float = 0.25
-const DEFAULT_SPEED: float = 1000.0      
+const DEFAULT_SPEED: float = 1000.0
+const ZIPLINE_SPEED: float = 2000
+const ZIPLINE_ACCELERATION: int = 1700
 const FRICTION: float = 0.2
 const BOUNCE_FORCE_Y: float  = 1400.0
 const BOUNCE_FORCE_X: float = 1100.0

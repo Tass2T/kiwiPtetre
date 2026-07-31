@@ -2,23 +2,20 @@
 
 [ext_resource type="Script" uid="uid://bhkj28cgmtka6" path="res://scripts/props/zip_line.gd" id="1_aal4g"]
 
-[sub_resource type="Curve2D" id="Curve2D_fmd5y"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 12839, -6130, 0, 0, 0, 0, 13586, -5923)
-}
-point_count = 2
+[sub_resource type="Curve2D" id="Curve2D_aal4g"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_ddicg"]
+resource_local_to_scene = true
 
 [node name="ZipLine" type="Path2D" unique_id=915001607]
-curve = SubResource("Curve2D_fmd5y")
+curve = SubResource("Curve2D_aal4g")
 script = ExtResource("1_aal4g")
 
 [node name="Line2D" type="Line2D" parent="." unique_id=1100274529]
 
 [node name="PathFollow2D" type="PathFollow2D" parent="." unique_id=2041816597]
-position = Vector2(12839, -6130)
-rotation = 0.27032536
+position = Vector2(13668, -6262)
+rotation = 0.20159218
 loop = false
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1691758515]

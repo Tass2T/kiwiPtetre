@@ -50,9 +50,15 @@ tile_size = Vector2i(128, 128)
 physics_layer_0/collision_layer = 4
 sources/0 = SubResource("TileSetAtlasSource_6iamk")
 
+[sub_resource type="Curve2D" id="Curve2D_aal4g"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 14854, -6083, 0, 0, 0, 0, 16663, -5635)
+}
+point_count = 2
+
 [sub_resource type="Curve2D" id="Curve2D_6761a"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 14874, -5990, 0, 0, 0, 0, 16686, -5623)
+"points": PackedVector2Array(0, 0, 0, 0, 13419, -6039, 0, 0, 0, 0, 14634, -5864)
 }
 point_count = 2
 
@@ -96,5 +102,8 @@ offset = Vector2(0, 960)
 position = Vector2(13567, -3636)
 offset = Vector2(-1600, 0)
 
-[node name="ZipLine" parent="." unique_id=1104817254 instance=ExtResource("5_6761a")]
+[node name="ZipLine" parent="." unique_id=915001607 instance=ExtResource("5_6761a")]
+curve = SubResource("Curve2D_aal4g")
+
+[node name="ZipLine2" parent="." unique_id=873280336 instance=ExtResource("5_6761a")]
 curve = SubResource("Curve2D_6761a")
