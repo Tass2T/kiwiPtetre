@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cfsqd7yvnvein" path="res://scenes/props/jump_box.tscn" id="3_nsrm0"]
 [ext_resource type="PackedScene" uid="uid://bhwlc3eshk0j6" path="res://scenes/props/moving_Platform.tscn" id="4_x42e6"]
 [ext_resource type="PackedScene" uid="uid://j2j8dqumpjv1" path="res://scenes/props/zip_line.tscn" id="5_6761a"]
+[ext_resource type="PackedScene" uid="uid://c6tl742bmnm1p" path="res://scenes/props/destructible_platform.tscn" id="6_sk5k4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6iamk"]
 texture = ExtResource("2_6iamk")
@@ -65,7 +66,7 @@ point_count = 2
 [node name="Level_One" type="Node2D" unique_id=1112974152]
 
 [node name="Player" parent="." unique_id=1752384532 instance=ExtResource("1_2mbx3")]
-position = Vector2(410, 359)
+position = Vector2(2111, 424)
 collision_mask = 32782
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=148466220]
@@ -109,3 +110,14 @@ curve = SubResource("Curve2D_aal4g")
 
 [node name="ZipLine2" parent="ZipLines" unique_id=938860680 instance=ExtResource("5_6761a")]
 curve = SubResource("Curve2D_6761a")
+
+[node name="Destructibles" type="Node" parent="." unique_id=429214166]
+
+[node name="DestructiblePlatform" parent="Destructibles" unique_id=1675851078 instance=ExtResource("6_sk5k4")]
+position = Vector2(2574, 302)
+
+[node name="DestructiblePlatform2" parent="Destructibles" unique_id=1464509470 instance=ExtResource("6_sk5k4")]
+position = Vector2(2702, 302)
+
+[node name="DestructiblePlatform3" parent="Destructibles" unique_id=1467722691 instance=ExtResource("6_sk5k4")]
+position = Vector2(2830, 302)
