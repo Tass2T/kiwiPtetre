@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://v64cfg3m0bgw"]
+
+[ext_resource type="Script" uid="uid://bv3ha8dt8rgji" path="res://scripts/props/destructible_wall.gd" id="1_r8j55"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_24iat"]
+size = Vector2(50, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v4met"]
+size = Vector2(52, 130)
+
+[node name="DestructibleWall" type="StaticBody2D" unique_id=1706854768]
+collision_layer = 12
+script = ExtResource("1_r8j55")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1705027883]
+offset_left = -25.0
+offset_top = -64.0
+offset_right = 25.0
+offset_bottom = 64.0
+color = Color(0.7411765, 0.4745098, 0.23529412, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1833294105]
+shape = SubResource("RectangleShape2D_24iat")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2141546587]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1773368417]
+shape = SubResource("RectangleShape2D_v4met")
+
+[node name="Timer" type="Timer" parent="." unique_id=834960359]
+one_shot = true
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

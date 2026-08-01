@@ -9,7 +9,7 @@ size = Vector2(128, 50)
 size = Vector2(130, 50.5)
 
 [node name="DestructiblePlatform" type="StaticBody2D" unique_id=1464509470]
-collision_layer = 8
+collision_layer = 12
 script = ExtResource("1_1lvqn")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=789383387]
