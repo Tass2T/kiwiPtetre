@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bqsou3rygcoda"]
+
+[ext_resource type="Script" uid="uid://yc3hqxxi7w4b" path="res://scripts/enemies/fox_rider.gd" id="1_nk6pk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_24iat"]
+size = Vector2(260.5, 181)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v4met"]
+size = Vector2(515, 75)
+
+[node name="FoxRider" type="CharacterBody2D" unique_id=86410702]
+collision_mask = 4
+script = ExtResource("1_nk6pk")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=567576214]
+offset_left = -137.0
+offset_top = -96.0
+offset_right = 137.04349
+offset_bottom = 95.0
+color = Color(0.85787445, 0, 0.1784642, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=972777390]
+position = Vector2(-0.25, 0.5)
+shape = SubResource("RectangleShape2D_24iat")
+
+[node name="VoidCast" type="RayCast2D" parent="." unique_id=1593907916]
+position = Vector2(130, 91)
+target_position = Vector2(0, 10)
+collision_mask = 4
+
+[node name="WallCast" type="RayCast2D" parent="." unique_id=815213268]
+position = Vector2(0, 88)
+target_position = Vector2(147, 0)
+collision_mask = 4
+
+[node name="VisionArea2D" type="Area2D" parent="." unique_id=1643884468]
+
+[node name="VisionCollisionShape2D" type="CollisionShape2D" parent="VisionArea2D" unique_id=1741956389]
+position = Vector2(257.5, -0.5)
+shape = SubResource("RectangleShape2D_v4met")
+
+[connection signal="body_entered" from="VisionArea2D" to="." method="_on_area_2d_body_entered"]
