@@ -6,7 +6,7 @@
 size = Vector2(260.5, 181)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v4met"]
-size = Vector2(515, 75)
+size = Vector2(650, 75)
 
 [node name="FoxRider" type="CharacterBody2D" unique_id=86410702]
 collision_mask = 4
@@ -36,7 +36,11 @@ collision_mask = 4
 [node name="VisionArea2D" type="Area2D" parent="." unique_id=1643884468]
 
 [node name="VisionCollisionShape2D" type="CollisionShape2D" parent="VisionArea2D" unique_id=1741956389]
-position = Vector2(257.5, -0.5)
+position = Vector2(325, -0.5)
 shape = SubResource("RectangleShape2D_v4met")
 
+[node name="SurpriseTimer" type="Timer" parent="." unique_id=1145912895]
+one_shot = true
+
 [connection signal="body_entered" from="VisionArea2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="SurpriseTimer" to="." method="_on_surprise_timer_timeout"]
