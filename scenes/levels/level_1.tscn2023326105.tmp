@@ -1,17 +1,16 @@
 [gd_scene format=4 uid="uid://7payev6pv87w"]
 
-[ext_resource type="Script" uid="uid://dqndhndk1hqtv" path="res://scripts/levels/level.gd" id="1_dga24"]
-[ext_resource type="PackedScene" uid="uid://b3x44w8rh4do3" path="res://scenes/player.tscn" id="2_qxy0u"]
-[ext_resource type="Texture2D" uid="uid://bc4jvwu4unqnm" path="res://assets/Levels/level_one_spritesheet.png" id="3_excbq"]
-[ext_resource type="PackedScene" uid="uid://cfsqd7yvnvein" path="res://scenes/props/jump_box.tscn" id="4_iav0o"]
-[ext_resource type="PackedScene" uid="uid://bhwlc3eshk0j6" path="res://scenes/props/moving_Platform.tscn" id="5_dnkej"]
-[ext_resource type="PackedScene" uid="uid://j2j8dqumpjv1" path="res://scenes/props/zip_line.tscn" id="6_mm8aj"]
-[ext_resource type="PackedScene" uid="uid://bqsou3rygcoda" path="res://scenes/enemies/fox_rider.tscn" id="7_wtwp4"]
-[ext_resource type="PackedScene" uid="uid://jkwi5geovyoo" path="res://scenes/props/checkpoint.tscn" id="8_iwr0g"]
-[ext_resource type="PackedScene" uid="uid://dje8qw1v6shy1" path="res://scenes/obstacles/Thorns.tscn" id="9_bahl2"]
+[ext_resource type="PackedScene" uid="uid://b3x44w8rh4do3" path="res://Scenes/player.tscn" id="1_2mbx3"]
+[ext_resource type="Script" uid="uid://dqndhndk1hqtv" path="res://Scripts/levels/level.gd" id="1_tlryv"]
+[ext_resource type="Texture2D" uid="uid://bc4jvwu4unqnm" path="res://Assets/Levels/level_one_spritesheet.png" id="2_6iamk"]
+[ext_resource type="PackedScene" uid="uid://cfsqd7yvnvein" path="res://Scenes/props/jump_box.tscn" id="3_nsrm0"]
+[ext_resource type="PackedScene" uid="uid://bhwlc3eshk0j6" path="res://Scenes/props/moving_Platform.tscn" id="4_x42e6"]
+[ext_resource type="PackedScene" uid="uid://j2j8dqumpjv1" path="res://Scenes/props/zip_line.tscn" id="5_6761a"]
+[ext_resource type="PackedScene" uid="uid://bqsou3rygcoda" path="res://Scenes/enemies/fox_rider.tscn" id="6_sk5k4"]
+[ext_resource type="PackedScene" uid="uid://jkwi5geovyoo" path="res://Scenes/props/checkpoint.tscn" id="7_oc4kc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6iamk"]
-texture = ExtResource("3_excbq")
+texture = ExtResource("2_6iamk")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-38.4, -38.4, 38.4, -38.4, 38.4, 38.4, -38.4, 38.4)
@@ -71,9 +70,9 @@ _data = {
 point_count = 2
 
 [node name="Level_One" type="Node2D" unique_id=1112974152]
-script = ExtResource("1_dga24")
+script = ExtResource("1_tlryv")
 
-[node name="Player" parent="." unique_id=1752384532 instance=ExtResource("2_qxy0u")]
+[node name="Player" parent="." unique_id=1752384532 instance=ExtResource("1_2mbx3")]
 position = Vector2(2111, 424)
 collision_mask = 32782
 
@@ -83,55 +82,48 @@ tile_set = SubResource("TileSet_ddicg")
 
 [node name="Jumboxes" type="Node" parent="." unique_id=1557321876]
 
-[node name="JumpBox" parent="Jumboxes" unique_id=1070814140 instance=ExtResource("4_iav0o")]
+[node name="JumpBox" parent="Jumboxes" unique_id=1070814140 instance=ExtResource("3_nsrm0")]
 position = Vector2(10153, -192)
 
-[node name="JumpBox2" parent="Jumboxes" unique_id=1315129317 instance=ExtResource("4_iav0o")]
+[node name="JumpBox2" parent="Jumboxes" unique_id=1315129317 instance=ExtResource("3_nsrm0")]
 position = Vector2(11190, -3790)
 
 [node name="MovingPlatform" type="Node" parent="." unique_id=894803151]
 
-[node name="MovingPlatform" parent="MovingPlatform" unique_id=1089658635 instance=ExtResource("5_dnkej")]
+[node name="MovingPlatform" parent="MovingPlatform" unique_id=1089658635 instance=ExtResource("4_x42e6")]
 position = Vector2(11589, -1514)
 offset = Vector2(1000, 0)
 
-[node name="MovingPlatform2" parent="MovingPlatform" unique_id=1296169978 instance=ExtResource("5_dnkej")]
+[node name="MovingPlatform2" parent="MovingPlatform" unique_id=1296169978 instance=ExtResource("4_x42e6")]
 position = Vector2(14291, -1522)
 offset = Vector2(-1000, 0)
 
-[node name="MovingPlatform3" parent="MovingPlatform" unique_id=1904480615 instance=ExtResource("5_dnkej")]
+[node name="MovingPlatform3" parent="MovingPlatform" unique_id=1904480615 instance=ExtResource("4_x42e6")]
 position = Vector2(15007, -1518)
 offset = Vector2(0, -960)
 
-[node name="MovingPlatform4" parent="MovingPlatform" unique_id=692107586 instance=ExtResource("5_dnkej")]
+[node name="MovingPlatform4" parent="MovingPlatform" unique_id=692107586 instance=ExtResource("4_x42e6")]
 position = Vector2(14301, -3636)
 offset = Vector2(0, 960)
 
-[node name="MovingPlatform5" parent="MovingPlatform" unique_id=1428775188 instance=ExtResource("5_dnkej")]
+[node name="MovingPlatform5" parent="MovingPlatform" unique_id=1428775188 instance=ExtResource("4_x42e6")]
 position = Vector2(13567, -3636)
 offset = Vector2(-1600, 0)
 
 [node name="ZipLines" type="Node" parent="." unique_id=1834494437]
 
-[node name="ZipLine" parent="ZipLines" unique_id=915001607 instance=ExtResource("6_mm8aj")]
+[node name="ZipLine" parent="ZipLines" unique_id=915001607 instance=ExtResource("5_6761a")]
 curve = SubResource("Curve2D_aal4g")
 
-[node name="ZipLine2" parent="ZipLines" unique_id=938860680 instance=ExtResource("6_mm8aj")]
+[node name="ZipLine2" parent="ZipLines" unique_id=938860680 instance=ExtResource("5_6761a")]
 curve = SubResource("Curve2D_6761a")
 
 [node name="Enemies" type="Node" parent="." unique_id=611749348]
 
-[node name="FoxRider" parent="Enemies" unique_id=86410702 instance=ExtResource("7_wtwp4")]
+[node name="FoxRider" parent="Enemies" unique_id=86410702 instance=ExtResource("6_sk5k4")]
 position = Vector2(7032, -871)
 
 [node name="Checkpoints" type="Node" parent="." unique_id=135012427]
 
-[node name="Checkpoint" parent="Checkpoints" unique_id=1955175805 instance=ExtResource("8_iwr0g")]
-position = Vector2(4170, 438)
-initial_checkpoint = true
-
-[node name="Checkpoint2" parent="Checkpoints" unique_id=1621030783 instance=ExtResource("8_iwr0g")]
-position = Vector2(4072, 442)
-
-[node name="Thorns" parent="." unique_id=972836044 instance=ExtResource("9_bahl2")]
-position = Vector2(2765, 592)
+[node name="Checkpoint" parent="Checkpoints" unique_id=1955175805 instance=ExtResource("7_oc4kc")]
+position = Vector2(2966, 458)

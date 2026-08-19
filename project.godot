@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Game="*uid://bf18205q5nte6"
+GameManager="*uid://c4titf46owvps"
 
 [display]
 
@@ -171,3 +171,4 @@ sprint={
 
 textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
+viewport/hdr_2d=true
