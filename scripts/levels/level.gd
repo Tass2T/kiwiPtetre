@@ -9,5 +9,6 @@ func _ready() -> void:
 		if i.name == "Checkpoints":
 			for j in i.get_children():
 				if j is CheckPoint:
-					checkpoints.push_front(j)
+					checkpoints.push_back(j)
 			
+	

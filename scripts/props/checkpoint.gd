@@ -1,6 +1,6 @@
 class_name CheckPoint extends Area2D
 
-@export var initial_checkpoint: bool = false
+@export var passed: bool = false
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is Player:

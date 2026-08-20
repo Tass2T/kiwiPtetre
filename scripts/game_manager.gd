@@ -1,4 +1,4 @@
-class_name Game_Manager extends Node
+extends Node
 
 var current_level: int = 1
 var player_spawn_position: Vector2
