@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://capq14c0ffiwc" path="res://scenes/LevelPortal.tscn" id="1_dswqx"]
 [ext_resource type="PackedScene" uid="uid://b3x44w8rh4do3" path="res://scenes/player.tscn" id="2_laj7o"]
-[ext_resource type="Texture2D" uid="uid://ct4ndgusl7tub" path="res://Assets/Levels/placeHolderSpritesheet.png" id="3_fi56y"]
+[ext_resource type="Texture2D" path="res://Assets/Levels/placeHolderSpritesheet.png" id="3_fi56y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q2mrg"]
 texture = ExtResource("3_fi56y")

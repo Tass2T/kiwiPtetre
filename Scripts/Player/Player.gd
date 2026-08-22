@@ -6,6 +6,7 @@ class_name Player extends CharacterBody2D
 @onready var bounce_state: BounceState = $States/Bounce
 @onready var fall_state: Fall_State = $States/Fall
 @onready var zip_state: Zip_State = $States/Zip
+@onready var lose_state: Lose_State = $States/Lose
 
 const GRAVITY : float = 4000.0
 const JUMP_SPEED: float = 1800.0
@@ -25,6 +26,11 @@ var zipline_to_follow: PathFollow2D
 
 func _ready() -> void:
 	state_manager.Initialize(self)
+	
+	if GameManager.player_spawn_position != Vector2.ZERO:
+		position = GameManager.player_spawn_position
+	
+	visible = true
 
 func _physics_process(_delta: float) -> void:
 	
@@ -58,8 +64,13 @@ func trigger_state(new_state: String) -> void:
 			state_manager.set_state(fall_state)
 		"zip":
 			state_manager.set_state(zip_state)
+		"lost": 
+			state_manager.set_state(lose_state)
 	
 	return
 	
 func set_zipline_path(new_zipline_to_follow: PathFollow2D) -> void:
 	zipline_to_follow = new_zipline_to_follow
+	
+func lose() -> void:
+	GameManager.handle_game_over()
