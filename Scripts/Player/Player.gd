@@ -26,6 +26,11 @@ var zipline_to_follow: PathFollow2D
 
 func _ready() -> void:
 	state_manager.Initialize(self)
+	
+	if GameManager.player_spawn_position != Vector2.ZERO:
+		position = GameManager.player_spawn_position
+	
+	visible = true
 
 func _physics_process(_delta: float) -> void:
 	

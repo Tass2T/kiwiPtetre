@@ -369,6 +369,7 @@ size = Vector2(102, 146)
 size = Vector2(25, 27)
 
 [node name="Player" type="CharacterBody2D" unique_id=1752384532 groups=["player"]]
+visible = false
 collision_mask = 134
 script = ExtResource("1_jej6c")
 
@@ -386,8 +387,7 @@ shape = SubResource("RectangleShape2D_f60y1")
 position = Vector2(0, -181)
 zoom = Vector2(0.5, 0.5)
 limit_left = 0
-position_smoothing_enabled = true
-position_smoothing_speed = 1.0
+position_smoothing_speed = 6.0
 
 [node name="States" type="Node" parent="." unique_id=582584395]
 script = ExtResource("3_f1ej7")

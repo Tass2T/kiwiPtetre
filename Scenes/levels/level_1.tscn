@@ -128,9 +128,11 @@ position = Vector2(7032, -871)
 
 [node name="Checkpoint" parent="Checkpoints" unique_id=1955175805 instance=ExtResource("8_iwr0g")]
 position = Vector2(535, 446)
+checkpoint_id = "cp_01"
 
 [node name="Checkpoint2" parent="Checkpoints" unique_id=1621030783 instance=ExtResource("8_iwr0g")]
 position = Vector2(3793, 458)
+checkpoint_id = "cp_02"
 
 [node name="Thorns" parent="." unique_id=972836044 instance=ExtResource("9_bahl2")]
 position = Vector2(2765, 592)
