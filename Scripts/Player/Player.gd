@@ -7,6 +7,7 @@ class_name Player extends CharacterBody2D
 @onready var fall_state: Fall_State = $States/Fall
 @onready var zip_state: Zip_State = $States/Zip
 @onready var lose_state: Lose_State = $States/Lose
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 const GRAVITY : float = 4000.0
 const JUMP_SPEED: float = 1800.0
@@ -15,10 +16,12 @@ const DEFAULT_SPEED: float = 1000.0
 const ZIPLINE_SPEED: float = 2000
 const ZIPLINE_ACCELERATION: int = 1700
 const FRICTION: float = 0.2
-const BOUNCE_FORCE_Y: float  = 1400.0
-const BOUNCE_FORCE_X: float = 1100.0
 
-var direction: float = 0
+const BOUNCE_FORCE_Y: float  = 2000.0
+const BOUNCE_FORCE_X: float = 500.0
+
+var direction: float = 1.0
+var sprite_direction: float = 1.0
 var wall_direction: float = 0.0
 var speed = DEFAULT_SPEED
 var is_sprinting: bool = false
@@ -38,14 +41,11 @@ func _physics_process(_delta: float) -> void:
 	
 	direction = Input.get_axis("left", "right")
 	
+	if direction and direction != sprite_direction:
+		sprite_direction = direction
+		animated_sprite_2d.flip_h = direction < 0
+			
 	wall_direction = check_wall_collision()
-	
-	if Input.is_action_just_pressed("sprint"):
-		is_sprinting = true
-		speed = DEFAULT_SPEED * 2
-	elif Input.is_action_just_released("sprint"):
-		is_sprinting = false
-		speed = DEFAULT_SPEED
 
 
 func check_wall_collision() -> float:

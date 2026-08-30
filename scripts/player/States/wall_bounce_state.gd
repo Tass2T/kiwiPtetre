@@ -2,12 +2,22 @@ class_name Wall_Bounce_State extends State
 
 @onready var fall_state: Fall_State = $"../Fall"
 @onready var idle_state: Idle_State = $"../Idle"
+@onready var wall_bounce_timer: Timer = $WallBounceTimer
 
 func Enter() -> void:
 	Initialize_Bounce()
 
 func Physics_Process(delta: float) -> State:
+	
 	player.velocity.y += player.GRAVITY * delta
+	
+	if !wall_bounce_timer.is_stopped():
+		return
+	
+	if player.direction != 0:
+		player.velocity.x = lerp(player.velocity.x, player.direction * player.speed, player.ACCELERATION)
+	else:
+		player.velocity.y += player.GRAVITY * delta
 	
 	if player.velocity.y > 0:
 		return fall_state
@@ -26,5 +36,6 @@ func Input_Process(input: InputEvent) -> State:
 	return null
 	
 func Initialize_Bounce() -> void:
+	wall_bounce_timer.start()
 	player.velocity.x += player.BOUNCE_FORCE_X * -1 * player.wall_direction
 	player.velocity.y = -player.BOUNCE_FORCE_Y

@@ -3,7 +3,10 @@ class_name Jump_State extends State
 @onready var fall_state: Node = $"../Fall"
 @onready var wall_bounce_state: Wall_Bounce_State = $"../WallBounce"
 
+@onready var animated_sprite_2d: AnimatedSprite2D = $"../../AnimatedSprite2D"
+
 func Enter() -> void:
+	animated_sprite_2d.play("jump")
 	player.velocity.y -= player.JUMP_SPEED
 
 func Physics_Process(delta: float) -> State:

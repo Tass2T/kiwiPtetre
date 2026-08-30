@@ -5,6 +5,11 @@ class_name Idle_State extends State
 @onready var jump_state : Jump_State = $"../Jump"
 @onready var crouch_state: Crouch_State = $"../Crouch"
 
+@onready var animated_sprite_2d: AnimatedSprite2D = $"../../AnimatedSprite2D"
+
+func Enter() -> void:
+	animated_sprite_2d.play("idle")
+
 func Physics_Process(_delta: float) -> State:
 	player.velocity.x = lerp(player.velocity.x, 0.0, player.FRICTION)
 	

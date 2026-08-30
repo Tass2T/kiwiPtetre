@@ -6,11 +6,14 @@ class_name Run_State extends State
 @onready var crouch_state: Crouch_State = $"../Crouch"
 @onready var coyote_timer: Timer = $CoyoteTimer
 
+@onready var animated_sprite_2d: AnimatedSprite2D = $"../../AnimatedSprite2D"
+
 const COYOTE_FRAMES: int = 7
 var coyote: bool = false
 var last_floor: bool = false
 	
 func Enter() -> void:
+	animated_sprite_2d.play("run")
 	coyote_timer.wait_time = COYOTE_FRAMES / 60.0
 
 func Physics_Process(_delta: float) -> State:
