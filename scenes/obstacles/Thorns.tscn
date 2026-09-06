@@ -4,17 +4,19 @@
 [ext_resource type="Texture2D" uid="uid://ilylu8uki0kj" path="res://assets/props/ronces.png" id="2_vwplj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nltr0"]
-size = Vector2(308, 136)
+size = Vector2(373.9999, 92.75)
 
 [node name="Thorns" type="Area2D" unique_id=972836044]
 script = ExtResource("1_okj43")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=903309583]
-shape = SubResource("RectangleShape2D_nltr0")
-
 [node name="Ronces" type="Sprite2D" parent="." unique_id=1281773079]
-position = Vector2(-0.5, 1.0000007)
-scale = Vector2(1.93125, 1.6999999)
+position = Vector2(-5.722046e-06, 1.4305115e-06)
+scale = Vector2(0.28625384, 0.25197753)
 texture = ExtResource("2_vwplj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=903309583]
+position = Vector2(-5.0000095, 18.375)
+scale = Vector2(1.0000002, 1)
+shape = SubResource("RectangleShape2D_nltr0")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -6,7 +6,7 @@ class_name Player extends CharacterBody2D
 @onready var bounce_state: BounceState = $States/Bounce
 @onready var fall_state: Fall_State = $States/Fall
 @onready var zip_state: Zip_State = $States/Zip
-@onready var lose_state: Lose_State = $States/Lose
+@onready var hurt_state: Hurt_State = $States/Hurt
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 const GRAVITY : float = 4000.0
@@ -23,6 +23,8 @@ var wall_direction: float = 0.0
 var speed = DEFAULT_SPEED
 var is_sprinting: bool = false
 var zipline_to_follow: PathFollow2D
+
+const MAX_FALLING_SPEED: float = 1900.0
 
 func _ready() -> void:
 	state_manager.Initialize(self)
@@ -62,7 +64,7 @@ func trigger_state(new_state: String) -> void:
 		"zip":
 			state_manager.set_state(zip_state)
 		"lost": 
-			state_manager.set_state(lose_state)
+			state_manager.set_state(hurt_state)
 	
 	return
 	

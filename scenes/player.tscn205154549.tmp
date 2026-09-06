@@ -244,7 +244,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"hurt",
-"speed": 18.0
+"speed": 16.0
 }, {
 "frames": [{
 "duration": 1.0,
