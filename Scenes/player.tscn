@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dfojhncb57ger" path="res://assets/player/oisif.png" id="2_oprun"]
 [ext_resource type="Texture2D" uid="uid://cudueojjc8bv8" path="res://assets/player/jump.png" id="3_a8ls1"]
 [ext_resource type="Script" uid="uid://c2ua2o68cn1uq" path="res://scripts/Player/States/state_manager.gd" id="3_f1ej7"]
+[ext_resource type="Texture2D" uid="uid://cvd1k753ufesw" path="res://assets/player/fall.png" id="4_fulsm"]
 [ext_resource type="Script" uid="uid://dmkluc0mejuef" path="res://scripts/Player/States/idle_state.gd" id="4_oprun"]
 [ext_resource type="Texture2D" uid="uid://do6p2vll4kw47" path="res://assets/player/run.png" id="4_qfm1y"]
 [ext_resource type="Script" uid="uid://bnp2d6b0wg7tt" path="res://scripts/Player/States/run_state.gd" id="5_a8ls1"]
@@ -69,6 +70,22 @@ region = Rect2(0, 512, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l71n6"]
 atlas = ExtResource("2_oprun")
+region = Rect2(512, 512, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2b1d"]
+atlas = ExtResource("4_fulsm")
+region = Rect2(0, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cs1tg"]
+atlas = ExtResource("4_fulsm")
+region = Rect2(512, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2dvfe"]
+atlas = ExtResource("4_fulsm")
+region = Rect2(0, 512, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_giy8y"]
+atlas = ExtResource("4_fulsm")
 region = Rect2(512, 512, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ke2ow"]
@@ -181,6 +198,23 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_j2b1d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cs1tg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2dvfe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_giy8y")
+}],
+"loop": 0,
+"name": &"fall",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_ke2ow")
 }, {
 "duration": 1.0,
@@ -248,7 +282,7 @@ script = ExtResource("1_jej6c")
 position = Vector2(1, 17)
 scale = Vector2(0.34912106, 0.3584184)
 sprite_frames = SubResource("SpriteFrames_ddicg")
-animation = &"crouch"
+animation = &"fall"
 autoplay = "idle"
 frame = 3
 frame_progress = 1.0

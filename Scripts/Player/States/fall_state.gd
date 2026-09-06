@@ -8,9 +8,11 @@ class_name Fall_State extends State
 const JUMP_BUFFER_TIME: float = 0.12
 const MAX_FALLING_SPEED: float = 1900.0
 var jump_buffer_timer: float = 0.0
+@onready var animated_sprite_2d: AnimatedSprite2D = $"../../AnimatedSprite2D"
 
 func Enter() -> void:
 	jump_buffer_timer = 0
+	animated_sprite_2d.play("fall")
 
 func Physics_Process(delta: float) -> State:
 	
