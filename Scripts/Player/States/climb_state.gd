@@ -1,10 +1,13 @@
 class_name Climb_State extends State
 
+@onready var animated_sprite_2d: AnimatedSprite2D = $"../../AnimatedSprite2D"
+
 @onready var idle_state: Idle_State = $"../Idle"
 @onready var wall_bounce_state: Wall_Bounce_State = $"../WallBounce"
 @onready var fall_state: Fall_State = $"../Fall"
 
 func Enter() -> void:
+	animated_sprite_2d.play("climb")
 	player.velocity.y = player.velocity.y / 2
 
 func Physics_Process(delta: float) -> State:

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cwr6gp4yhn71x" path="res://scripts/Player/Player.gd" id="1_jej6c"]
 [ext_resource type="Texture2D" uid="uid://b8kf8cmcvgtxw" path="res://assets/player/crouch.png" id="2_a8ls1"]
+[ext_resource type="Texture2D" uid="uid://t138nc1uojc0" path="res://assets/player/climb.png" id="2_fulsm"]
 [ext_resource type="Texture2D" uid="uid://dfojhncb57ger" path="res://assets/player/oisif.png" id="2_oprun"]
 [ext_resource type="Texture2D" uid="uid://cudueojjc8bv8" path="res://assets/player/jump.png" id="3_a8ls1"]
 [ext_resource type="Script" uid="uid://c2ua2o68cn1uq" path="res://scripts/Player/States/state_manager.gd" id="3_f1ej7"]
@@ -18,23 +19,21 @@
 [ext_resource type="Script" uid="uid://bj1ji2ut3nseo" path="res://scripts/Player/States/zip_state.gd" id="12_4ni07"]
 [ext_resource type="Script" uid="uid://bgivssnsphoay" path="res://scripts/Player/States/lose_state.gd" id="13_l71n6"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fulsm"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_fdfoy"]
+atlas = ExtResource("2_fulsm")
+region = Rect2(0, 0, 512, 512)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3v2ag"]
-atlas = SubResource("CompressedTexture2D_fulsm")
-region = Rect2(266, 1520, 266, 380)
+[sub_resource type="AtlasTexture" id="AtlasTexture_hhpqf"]
+atlas = ExtResource("2_fulsm")
+region = Rect2(512, 0, 512, 512)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jej6c"]
-atlas = SubResource("CompressedTexture2D_fulsm")
-region = Rect2(532, 1520, 266, 380)
+[sub_resource type="AtlasTexture" id="AtlasTexture_g5jhy"]
+atlas = ExtResource("2_fulsm")
+region = Rect2(0, 512, 512, 512)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_f1ej7"]
-atlas = SubResource("CompressedTexture2D_fulsm")
-region = Rect2(798, 1520, 266, 380)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_oprun"]
-atlas = SubResource("CompressedTexture2D_fulsm")
-region = Rect2(1064, 1520, 266, 380)
+[sub_resource type="AtlasTexture" id="AtlasTexture_holxr"]
+atlas = ExtResource("2_fulsm")
+region = Rect2(512, 512, 512, 512)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qfm1y"]
 atlas = ExtResource("2_a8ls1")
@@ -144,20 +143,20 @@ region = Rect2(512, 512, 512, 512)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3v2ag")
+"texture": SubResource("AtlasTexture_fdfoy")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jej6c")
+"texture": SubResource("AtlasTexture_hhpqf")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_f1ej7")
+"texture": SubResource("AtlasTexture_g5jhy")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_oprun")
+"texture": SubResource("AtlasTexture_holxr")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"climb",
-"speed": 10.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -282,7 +281,7 @@ script = ExtResource("1_jej6c")
 position = Vector2(1, 17)
 scale = Vector2(0.34912106, 0.3584184)
 sprite_frames = SubResource("SpriteFrames_ddicg")
-animation = &"fall"
+animation = &"climb"
 autoplay = "idle"
 frame = 3
 frame_progress = 1.0

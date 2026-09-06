@@ -7,8 +7,11 @@ class_name Wall_Bounce_State extends State
 const BOUNCE_FORCE_Y: float  = 1800.0
 const BOUNCE_FORCE_X: float = 700.0
 
+@onready var animated_sprite_2d: AnimatedSprite2D = $"../../AnimatedSprite2D"
+
 func Enter() -> void:
 	Initialize_Bounce()
+	animated_sprite_2d.play("jump")
 
 func Physics_Process(delta: float) -> State:
 	
