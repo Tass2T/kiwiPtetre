@@ -17,9 +17,6 @@ const ZIPLINE_SPEED: float = 2000
 const ZIPLINE_ACCELERATION: int = 1700
 const FRICTION: float = 0.2
 
-const BOUNCE_FORCE_Y: float  = 2000.0
-const BOUNCE_FORCE_X: float = 500.0
-
 var direction: float = 1.0
 var sprite_direction: float = 1.0
 var wall_direction: float = 0.0

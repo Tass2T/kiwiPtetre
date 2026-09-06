@@ -4,6 +4,9 @@ class_name Wall_Bounce_State extends State
 @onready var idle_state: Idle_State = $"../Idle"
 @onready var wall_bounce_timer: Timer = $WallBounceTimer
 
+const BOUNCE_FORCE_Y: float  = 1800.0
+const BOUNCE_FORCE_X: float = 700.0
+
 func Enter() -> void:
 	Initialize_Bounce()
 
@@ -37,5 +40,5 @@ func Input_Process(input: InputEvent) -> State:
 	
 func Initialize_Bounce() -> void:
 	wall_bounce_timer.start()
-	player.velocity.x += player.BOUNCE_FORCE_X * -1 * player.wall_direction
-	player.velocity.y = -player.BOUNCE_FORCE_Y
+	player.velocity.x += BOUNCE_FORCE_X * -1 * player.wall_direction
+	player.velocity.y = -BOUNCE_FORCE_Y
