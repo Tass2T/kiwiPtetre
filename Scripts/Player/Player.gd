@@ -71,5 +71,5 @@ func trigger_state(new_state: String) -> void:
 func set_zipline_path(new_zipline_to_follow: PathFollow2D) -> void:
 	zipline_to_follow = new_zipline_to_follow
 	
-func lose() -> void:
+func send_back_to_last_checkpoint() -> void:
 	GameManager.handle_game_over()

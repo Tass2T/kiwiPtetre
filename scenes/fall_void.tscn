@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cbr2uj2p2b28"]
+
+[ext_resource type="Script" uid="uid://508rdxx8v4hx" path="res://scripts/levels/fall_void.gd" id="1_3pm7c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6761a"]
+
+[node name="FallVoid" type="Area2D" unique_id=2130809181]
+script = ExtResource("1_3pm7c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=447149066]
+shape = SubResource("RectangleShape2D_6761a")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
