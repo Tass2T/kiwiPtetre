@@ -370,6 +370,9 @@ script = ExtResource("12_4ni07")
 [node name="Hurt" type="Node" parent="States" unique_id=2043919616]
 script = ExtResource("13_l71n6")
 
+[node name="RecoveryTimer" type="Timer" parent="States/Hurt" unique_id=1149442611]
+one_shot = true
+
 [node name="Ray_Right" type="RayCast2D" parent="." unique_id=482022923]
 position = Vector2(53, 0)
 target_position = Vector2(30, 0)
@@ -387,3 +390,4 @@ position = Vector2(-0.5, -44.5)
 shape = SubResource("RectangleShape2D_ddicg")
 
 [connection signal="timeout" from="States/Run/CoyoteTimer" to="States/Run" method="_on_coyote_timer_timeout"]
+[connection signal="timeout" from="States/Hurt/RecoveryTimer" to="States/Hurt" method="_on_recovery_timer_timeout"]
