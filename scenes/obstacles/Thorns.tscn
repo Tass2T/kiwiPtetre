@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dje8qw1v6shy1"]
 
 [ext_resource type="Script" uid="uid://d2qdktj7hxff4" path="res://scripts/obstacles/thorns.gd" id="1_okj43"]
-[ext_resource type="Texture2D" uid="uid://ilylu8uki0kj" path="res://assets/props/ronces.png" id="2_vwplj"]
+[ext_resource type="Texture2D" uid="uid://ilylu8uki0kj" path="res://Assets/props/ronces.png" id="2_vwplj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nltr0"]
 size = Vector2(373.9999, 92.75)
