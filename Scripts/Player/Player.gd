@@ -3,7 +3,7 @@ class_name Player extends CharacterBody2D
 @onready var ray_right: RayCast2D = $Ray_Right
 @onready var ray_left: RayCast2D = $Ray_Left
 @onready var state_manager: State_Manager = $States
-@onready var bounce_state: BounceState = $States/Bounce
+@onready var spring_state: SpringState = $States/Spring
 @onready var fall_state: Fall_State = $States/Fall
 @onready var zip_state: Zip_State = $States/Zip
 @onready var hurt_state: Hurt_State = $States/Hurt
@@ -57,8 +57,8 @@ func check_wall_collision() -> float:
 	
 func trigger_state(new_state: String) -> void:
 	match new_state:
-		"bounce":
-			state_manager.set_state(bounce_state)
+		"spring":
+			state_manager.set_state(spring_state)
 		"fall":
 			state_manager.set_state(fall_state)
 		"zip":

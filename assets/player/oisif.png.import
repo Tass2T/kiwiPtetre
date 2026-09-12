@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dfojhncb57ger"
-path="res://.godot/imported/oisif.png-3e9ad0cebb6c4ec57dde565a1582879f.ctex"
+path="res://.godot/imported/oisif.png-c7a10a3751e43c609d9f812246616d99.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/player/oisif.png"
-dest_files=["res://.godot/imported/oisif.png-3e9ad0cebb6c4ec57dde565a1582879f.ctex"]
+source_file="res://assets/player/oisif.png"
+dest_files=["res://.godot/imported/oisif.png-c7a10a3751e43c609d9f812246616d99.ctex"]
 
 [params]
 

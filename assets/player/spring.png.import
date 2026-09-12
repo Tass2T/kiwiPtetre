@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ilylu8uki0kj"
-path="res://.godot/imported/ronces.png-8a6ffcc87e6ffcac0cc91306731564f3.ctex"
+uid="uid://4hhtilicmvc7"
+path="res://.godot/imported/spring.png-5df601b58d4871d8b37d781182c29255.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/props/ronces.png"
-dest_files=["res://.godot/imported/ronces.png-8a6ffcc87e6ffcac0cc91306731564f3.ctex"]
+source_file="res://assets/player/spring.png"
+dest_files=["res://.godot/imported/spring.png-5df601b58d4871d8b37d781182c29255.ctex"]
 
 [params]
 

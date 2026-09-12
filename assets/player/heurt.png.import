@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://co0awsx70yx18"
-path="res://.godot/imported/heurt.png-afde867cc160890725859fa8e9ec1075.ctex"
+path="res://.godot/imported/heurt.png-5bff7b5148acdc71a251475c77755712.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/player/heurt.png"
-dest_files=["res://.godot/imported/heurt.png-afde867cc160890725859fa8e9ec1075.ctex"]
+source_file="res://assets/player/heurt.png"
+dest_files=["res://.godot/imported/heurt.png-5bff7b5148acdc71a251475c77755712.ctex"]
 
 [params]
 

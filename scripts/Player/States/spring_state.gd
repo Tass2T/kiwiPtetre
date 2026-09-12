@@ -1,9 +1,12 @@
-class_name BounceState extends State
+class_name SpringState extends State
 
 @onready var wall_bounce_state: Wall_Bounce_State = $"../WallBounce"
 @onready var fall_state: Fall_State = $"../Fall"
 
+@onready var animated_sprite_2d: AnimatedSprite2D = $"../../AnimatedSprite2D"
+
 func Enter() -> void:
+	animated_sprite_2d.play("spring")
 	player.velocity.y -= player.JUMP_SPEED * 2
 	
 func Physics_Process(delta: float) -> State:
