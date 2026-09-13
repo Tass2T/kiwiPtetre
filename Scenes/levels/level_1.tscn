@@ -1,16 +1,16 @@
 [gd_scene format=4 uid="uid://7payev6pv87w"]
 
 [ext_resource type="Script" uid="uid://dqndhndk1hqtv" path="res://scripts/levels/level.gd" id="1_excbq"]
-[ext_resource type="PackedScene" uid="uid://b3x44w8rh4do3" path="res://Scenes/player.tscn" id="2_iav0o"]
-[ext_resource type="Texture2D" uid="uid://bc4jvwu4unqnm" path="res://Assets/Levels/level_one_spritesheet.png" id="3_dnkej"]
-[ext_resource type="PackedScene" uid="uid://cfsqd7yvnvein" path="res://Scenes/props/jump_box.tscn" id="4_mm8aj"]
-[ext_resource type="PackedScene" uid="uid://c6tl742bmnm1p" path="res://Scenes/props/destructible_platform.tscn" id="5_wtwp4"]
-[ext_resource type="PackedScene" uid="uid://bhwlc3eshk0j6" path="res://Scenes/props/moving_Platform.tscn" id="6_iwr0g"]
-[ext_resource type="PackedScene" uid="uid://bqsou3rygcoda" path="res://Scenes/enemies/fox_rider.tscn" id="7_bahl2"]
-[ext_resource type="PackedScene" uid="uid://jkwi5geovyoo" path="res://Scenes/props/checkpoint.tscn" id="8_np2pn"]
-[ext_resource type="PackedScene" uid="uid://cbr2uj2p2b28" path="res://Scenes/fall_void.tscn" id="9_v6ha0"]
-[ext_resource type="PackedScene" uid="uid://dje8qw1v6shy1" path="res://Scenes/obstacles/Thorns.tscn" id="10_gmpev"]
-[ext_resource type="PackedScene" uid="uid://b7l0ecx1jlxai" path="res://Scenes/world_boundary.tscn" id="11_mkypq"]
+[ext_resource type="PackedScene" uid="uid://b3x44w8rh4do3" path="res://scenes/player.tscn" id="2_iav0o"]
+[ext_resource type="Texture2D" uid="uid://bc4jvwu4unqnm" path="res://assets/Levels/level_one_spritesheet.png" id="3_dnkej"]
+[ext_resource type="PackedScene" uid="uid://cfsqd7yvnvein" path="res://scenes/props/jump_box.tscn" id="4_mm8aj"]
+[ext_resource type="PackedScene" uid="uid://c6tl742bmnm1p" path="res://scenes/props/destructible_platform.tscn" id="5_wtwp4"]
+[ext_resource type="PackedScene" uid="uid://bhwlc3eshk0j6" path="res://scenes/props/moving_Platform.tscn" id="6_iwr0g"]
+[ext_resource type="PackedScene" uid="uid://bqsou3rygcoda" path="res://scenes/enemies/fox_rider.tscn" id="7_bahl2"]
+[ext_resource type="PackedScene" uid="uid://jkwi5geovyoo" path="res://scenes/props/checkpoint.tscn" id="8_np2pn"]
+[ext_resource type="PackedScene" uid="uid://cbr2uj2p2b28" path="res://scenes/fall_void.tscn" id="9_v6ha0"]
+[ext_resource type="PackedScene" uid="uid://dje8qw1v6shy1" path="res://scenes/obstacles/Thorns.tscn" id="10_gmpev"]
+[ext_resource type="PackedScene" uid="uid://b7l0ecx1jlxai" path="res://scenes/world_boundary.tscn" id="11_mkypq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6iamk"]
 texture = ExtResource("3_dnkej")
@@ -64,7 +64,7 @@ sources/0 = SubResource("TileSetAtlasSource_6iamk")
 script = ExtResource("1_excbq")
 
 [node name="Player" parent="." unique_id=1752384532 instance=ExtResource("2_iav0o")]
-position = Vector2(18458, -3210)
+position = Vector2(4838, 61)
 collision_mask = 98318
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=148466220]

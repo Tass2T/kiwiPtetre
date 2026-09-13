@@ -5,6 +5,8 @@ var last_checkpoint_id: String
 var player_spawn_position: Vector2
 var current_level_node: Node = null
 
+var player_life: int = 3
+
 func _ready() -> void:
 	load_level()
 
@@ -30,7 +32,7 @@ func set_player_spawn_position(new_position: Vector2):
 func set_checkpoint_id(new_checkpoint_id: String) -> void:
 	last_checkpoint_id = new_checkpoint_id
 	
-
+	
 func go_next_level() -> void:
 	current_level += 1
 	load_level()

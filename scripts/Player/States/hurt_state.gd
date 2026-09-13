@@ -22,8 +22,7 @@ func Physics_Process(delta: float) -> State:
 		
 	player.velocity.y = move_toward(player.velocity.y, player.MAX_FALLING_SPEED, player.GRAVITY * delta)
 		
-	return 
-
+	return
 
 func _on_recovery_timer_timeout() -> void:
 	player.trigger_state("fall")

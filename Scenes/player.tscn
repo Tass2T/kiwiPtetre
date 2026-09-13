@@ -421,5 +421,9 @@ collision_mask = 4
 position = Vector2(-0.5, -44.5)
 shape = SubResource("RectangleShape2D_ddicg")
 
+[node name="Invincibility_Timer" type="Timer" parent="." unique_id=1842597890]
+one_shot = true
+
 [connection signal="timeout" from="States/Run/CoyoteTimer" to="States/Run" method="_on_coyote_timer_timeout"]
 [connection signal="timeout" from="States/Hurt/RecoveryTimer" to="States/Hurt" method="_on_recovery_timer_timeout"]
+[connection signal="timeout" from="Invincibility_Timer" to="." method="_on_invincibility_timer_timeout"]
