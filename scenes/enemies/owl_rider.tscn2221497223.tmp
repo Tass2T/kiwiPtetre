@@ -7,9 +7,7 @@ size = Vector2(149, 205)
 
 [node name="OwlRider" type="Area2D" unique_id=1072698351]
 script = ExtResource("1_cvgbh")
-detection_range = 1000.0
-dive_duration = 1.4
-dive_depth_offset = 50.0
+detection_range = 400.0
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1064698168]
 offset_left = -81.0

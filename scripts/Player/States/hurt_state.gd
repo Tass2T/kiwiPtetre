@@ -9,6 +9,7 @@ class_name Hurt_State extends State
 const RECOVERY_TIME: float = 0.6
 
 func Enter() -> void:
+	GameManager.lower_damage()
 	recovery_timer.start(RECOVERY_TIME)
 	player.velocity = Vector2.ZERO
 	animated_sprite_2d.play("hurt")

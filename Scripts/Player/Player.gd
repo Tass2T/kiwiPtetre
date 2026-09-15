@@ -96,7 +96,6 @@ func stop_blinking() -> void:
 		tween.kill()
 	animated_sprite_2d.modulate.a = 1.0
 
-func take_damage(damage_amount: int) -> void:
+func take_damage() -> void:
 	trigger_state("hurt")
-	GameManager.lower_damage(damage_amount)
 	

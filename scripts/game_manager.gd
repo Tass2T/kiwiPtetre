@@ -42,8 +42,8 @@ func go_next_level() -> void:
 func handle_game_over() -> void:
 	load_level.call_deferred()
 	
-func lower_damage(damage_amount: int) -> void:
-	player_life -= damage_amount
+func lower_damage() -> void:
+	player_life -= 1
 	
 	if player_life <= 0:
 		handle_game_over()
