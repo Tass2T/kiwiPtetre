@@ -65,7 +65,7 @@ func trigger_state(new_state: String) -> void:
 			state_manager.set_state(fall_state)
 		"zip":
 			state_manager.set_state(zip_state)
-		"lost":
+		"hurt":
 			if !is_invicible:
 				is_invicible = true
 				invincibility_timer.start(INVISIBILITY_TIME)
@@ -95,3 +95,8 @@ func stop_blinking() -> void:
 	if tween:
 		tween.kill()
 	animated_sprite_2d.modulate.a = 1.0
+
+func take_damage(damage_amount: int) -> void:
+	trigger_state("hurt")
+	GameManager.lower_damage(damage_amount)
+	

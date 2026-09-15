@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://douamcuory1ll"]
+
+[ext_resource type="Script" uid="uid://cjltmckoxxkhj" path="res://scripts/enemies/owl_rider.gd" id="1_cvgbh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j3rv4"]
+size = Vector2(149, 205)
+
+[node name="OwlRider" type="Area2D" unique_id=1072698351]
+script = ExtResource("1_cvgbh")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1064698168]
+offset_left = -81.0
+offset_top = -107.0
+offset_right = 83.0
+offset_bottom = 109.0
+color = Color(1, 0.036992848, 0.066839755, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=749176169]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_j3rv4")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

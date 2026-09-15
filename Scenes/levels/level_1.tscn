@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c6tl742bmnm1p" path="res://scenes/props/destructible_platform.tscn" id="5_wtwp4"]
 [ext_resource type="PackedScene" uid="uid://bhwlc3eshk0j6" path="res://scenes/props/moving_Platform.tscn" id="6_iwr0g"]
 [ext_resource type="PackedScene" uid="uid://bqsou3rygcoda" path="res://scenes/enemies/fox_rider.tscn" id="7_bahl2"]
+[ext_resource type="PackedScene" uid="uid://douamcuory1ll" path="res://scenes/enemies/owl_rider.tscn" id="7_iav0o"]
 [ext_resource type="PackedScene" uid="uid://jkwi5geovyoo" path="res://scenes/props/checkpoint.tscn" id="8_np2pn"]
 [ext_resource type="PackedScene" uid="uid://cbr2uj2p2b28" path="res://scenes/fall_void.tscn" id="9_v6ha0"]
 [ext_resource type="PackedScene" uid="uid://dje8qw1v6shy1" path="res://scenes/obstacles/Thorns.tscn" id="10_gmpev"]
@@ -64,7 +65,7 @@ sources/0 = SubResource("TileSetAtlasSource_6iamk")
 script = ExtResource("1_excbq")
 
 [node name="Player" parent="." unique_id=1752384532 instance=ExtResource("2_iav0o")]
-position = Vector2(4838, 61)
+position = Vector2(2103, 400)
 collision_mask = 98318
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=148466220]
@@ -97,6 +98,9 @@ offset = Vector2(0, 500)
 [node name="ZipLines" type="Node" parent="." unique_id=1834494437]
 
 [node name="Enemies" type="Node" parent="." unique_id=611749348]
+
+[node name="OwlRider" parent="Enemies" unique_id=2073452975 instance=ExtResource("7_iav0o")]
+position = Vector2(2884, -63)
 
 [node name="FoxRider" parent="Enemies" unique_id=86410702 instance=ExtResource("7_bahl2")]
 position = Vector2(10672, -2771)

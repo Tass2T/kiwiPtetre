@@ -3,4 +3,4 @@ class_name Thorns extends Area2D
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is Player:
-		body.trigger_state("lost")
+		body.trigger_state("hurt")
