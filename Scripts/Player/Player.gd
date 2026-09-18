@@ -28,6 +28,7 @@ var is_sprinting: bool = false
 var zipline_to_follow: PathFollow2D
 var is_invicible: bool = false
 var tween: Tween
+var can_change_direction: bool = true
 
 func _ready() -> void:
 	state_manager.Initialize(self)
@@ -43,7 +44,7 @@ func _physics_process(_delta: float) -> void:
 	
 	direction = Input.get_axis("left", "right")
 	
-	if direction and direction != sprite_direction:
+	if direction and direction != sprite_direction and can_change_direction:
 		sprite_direction = direction
 		animated_sprite_2d.flip_h = direction < 0
 			

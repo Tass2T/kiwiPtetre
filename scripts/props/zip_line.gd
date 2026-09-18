@@ -4,11 +4,7 @@ class_name Zip_Line extends Path2D
 @onready var collision_shape_2d: CollisionShape2D = $Area2D/CollisionShape2D
 @onready var path_follow_2d: PathFollow2D = $PathFollow2D
 
-var player: Player
-
 func _ready() -> void:
-	
-	player = get_tree().root.find_child("Player", true, false)
 	
 	var points_count: int = curve.point_count
 
@@ -21,6 +17,8 @@ func _ready() -> void:
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
+	var	player = GameManager.find_player_instance()
+		
 	if area.name == "ZiplineHitbox" and player.state_manager.current_state.name != "Zip":
 		var local_pos: Vector2 = to_local(player.global_position)
 		
@@ -29,4 +27,3 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		path_follow_2d.progress = offset
 		player.set_zipline_path(path_follow_2d)
 		player.trigger_state("zip")
-		

@@ -360,6 +360,7 @@ shape = SubResource("RectangleShape2D_f60y1")
 position = Vector2(0, -181)
 zoom = Vector2(0.5, 0.5)
 limit_left = 0
+limit_bottom = 1766
 position_smoothing_speed = 6.0
 
 [node name="States" type="Node" parent="." unique_id=582584395]

@@ -1,4 +1,4 @@
-extends Area2D
+class_name World_Limit_Bottom extends Area2D
 
 
 func _on_body_entered(body: Node2D) -> void:

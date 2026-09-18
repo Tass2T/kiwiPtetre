@@ -5,6 +5,7 @@ class_name Zip_State extends State
 
 func Enter() -> void:
 	player.velocity = Vector2.ZERO
+	player.can_change_direction = false
 	
 func Physics_Process(delta: float) -> State:
 	
@@ -21,3 +22,6 @@ func Input_Process(input: InputEvent) -> State:
 	if input.is_action_pressed("jump"):
 		return jump_state
 	return
+
+func Exit() -> void:
+	player.can_change_direction = true

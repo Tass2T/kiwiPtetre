@@ -47,3 +47,6 @@ func lower_damage() -> void:
 	
 	if player_life <= 0:
 		handle_game_over()
+		
+func find_player_instance() -> Player:
+	return get_tree().get_first_node_in_group("player")

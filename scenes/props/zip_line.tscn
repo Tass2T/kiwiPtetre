@@ -3,6 +3,10 @@
 [ext_resource type="Script" uid="uid://bhkj28cgmtka6" path="res://scripts/props/zip_line.gd" id="1_aal4g"]
 
 [sub_resource type="Curve2D" id="Curve2D_aal4g"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 2
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_ddicg"]
 resource_local_to_scene = true

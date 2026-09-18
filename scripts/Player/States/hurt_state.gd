@@ -6,7 +6,7 @@ class_name Hurt_State extends State
 
 @onready var recovery_timer: Timer = $RecoveryTimer
 
-const RECOVERY_TIME: float = 0.6
+const RECOVERY_TIME: float = 0.4
 
 func Enter() -> void:
 	GameManager.lower_damage()
