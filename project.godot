@@ -55,6 +55,14 @@ right={
 "location": 0,
 "echo": false,
 "script": null
+), Object(InputEventJoypadButton,
+"resource_local_to_scene": false,
+"resource_name": "",
+"device": -1,
+"button_index": 14,
+"pressure": 0.0,
+"pressed": true,
+"script": null
 )]
 }
 left={
@@ -75,6 +83,14 @@ left={
 "unicode": 0,
 "location": 0,
 "echo": false,
+"script": null
+), Object(InputEventJoypadButton,
+"resource_local_to_scene": false,
+"resource_name": "",
+"device": -1,
+"button_index": 13,
+"pressure": 0.0,
+"pressed": true,
 "script": null
 )]
 }
@@ -97,6 +113,14 @@ up={
 "location": 0,
 "echo": false,
 "script": null
+), Object(InputEventJoypadButton,
+"resource_local_to_scene": false,
+"resource_name": "",
+"device": -1,
+"button_index": 11,
+"pressure": 0.0,
+"pressed": true,
+"script": null
 )]
 }
 down={
@@ -118,6 +142,14 @@ down={
 "location": 0,
 "echo": false,
 "script": null
+), Object(InputEventJoypadButton,
+"resource_local_to_scene": false,
+"resource_name": "",
+"device": -1,
+"button_index": 12,
+"pressure": 0.0,
+"pressed": true,
+"script": null
 )]
 }
 jump={
@@ -138,6 +170,14 @@ jump={
 "unicode": 32,
 "location": 0,
 "echo": false,
+"script": null
+), Object(InputEventJoypadButton,
+"resource_local_to_scene": false,
+"resource_name": "",
+"device": -1,
+"button_index": 0,
+"pressure": 0.0,
+"pressed": true,
 "script": null
 )]
 }
